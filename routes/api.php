@@ -21,17 +21,12 @@ Route::group([
     // User check-in ranks.
     // @Route /api/v2/checkin-ranks
     Route::middleware('auth:api')->group(function () use ($api) {
-        $api->group(['prefix' => 'user-setinfo'], function (RouteRegisterContract $api) {
+        $api->group(['prefix' => 'weapp-login'], function (RouteRegisterContract $api) {
 
-            // Get all users check-in ranks.
-            // @GET /api/v2/weapp-login
-            $api->post('/', API\UserController::class . '@SetUserInfo');
+            // @POST /api/v2/weapp-login/login-code
+            $api->post('/login-code', API\LoginController::class . '@loginByCode');
+            // @POST /api/v2/weapp-login/user-setinfo
+            $api->post('/user-setinfo', API\UserController::class . '@SetUserInfo');
         });
-    });
-    $api->group(['prefix' => 'login-code'], function (RouteRegisterContract $api) {
-
-        // Get all users check-in ranks.
-        // @GET /api/v2/weapp-login
-        $api->post('/', API\LoginController::class . '@loginByCode');
     });
 });
