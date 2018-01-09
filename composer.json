@@ -1,6 +1,6 @@
 {
-    "name": "aiwhj/weapp-login",
-    "description": "A \"aiwhj/weapp-login\" package For ThinkSNS+✈️.",
+    "name": "aiwhj/plus-weapp-login",
+    "description": "A \"微信小程序登录\" package For ThinkSNS+✈️.",
     "type": "library",
     "license": "MIT",
     "require": {
