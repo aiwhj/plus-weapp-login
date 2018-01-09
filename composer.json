@@ -1,0 +1,32 @@
+{
+    "name": "aiwhj/weapp-login",
+    "description": "A \"aiwhj/weapp-login\" package For ThinkSNS+✈️.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/console": "^5.5",
+        "illuminate/contracts": "^5.5",
+        "illuminate/database": "^5.5",
+        "illuminate/support": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aiwhj\\WeappLogin\\": "src/",
+            "Aiwhj\\WeappLogin\\Seeds\\": "database/seeds/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aiwhj\\WeappLogin\\Providers\\AppServiceProvider",
+                "Aiwhj\\WeappLogin\\Providers\\ModelServiceProvider",
+                "Aiwhj\\WeappLogin\\Providers\\RouteServiceProvider"
+            ]
+        }
+    },
+    "version": "1.0.0"
+}
